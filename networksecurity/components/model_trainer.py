@@ -13,7 +13,6 @@ from networksecurity.utils.main_utils.utils import load_numpy_array_data, evalua
 from networksecurity.utils.ml_utils.metric.classification_metric import get_classification_score
 
 from sklearn.linear_model import LogisticRegression
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import (
     AdaBoostClassifier,
@@ -23,10 +22,21 @@ from sklearn.ensemble import (
 import mlflow
 from urllib.parse import urlparse
 import dagshub
-dagshub.init(repo_owner=r'vikramnreddy01', repo_name=r'networksecurity', mlflow=True)
+
+
+
+# Initialize DagsHub tracking
+dagshub.init(
+    repo_owner="vikramnreddy01",
+    repo_name="networksecurity",
+    mlflow=True
+)
+
+# Configure MLflow
 os.environ["MLFLOW_TRACKING_URI"] = r'https://dagshub.com/vikramnreddy01/networksecurity.mlflow'
 os.environ["MLFLOW_TRACKING_USERNAME"] = r'vikramnreddy01'
-os.environ["MLFLOW_TRACKING_PASSWORD"] = r'45d853c0c1f12cf0f07f5cffd6d5ae7b41fbcb14'
+os.environ["MLFLOW_TRACKING_PASSWORD"] = r'28e8ded312555c788f14d7fd4083a1ca490f2c68'
+
 
 class ModelTrainer:
     def __init__(self, model_trainer_config: ModelTrainerConfig, data_transformation_artifact: DataTransformationArtifact):
@@ -38,8 +48,9 @@ class ModelTrainer:
 
     def track_mlflow(self, best_model, classification_metric):
         try:
-            mlflow.set_tracking_uri(uri="https://dagshub.com/vikramnreddy01/networksecurity.mlflow")
+            mlflow.set_tracking_uri(uri=os.environ["MLFLOW_TRACKING_URI"])
             tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
+
             with mlflow.start_run():
                 f1_score = classification_metric.f1_score
                 precision_score = classification_metric.precision_score
