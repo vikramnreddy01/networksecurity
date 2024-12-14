@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 MONGO_DB_URL="mongodb+srv://vikram:test@cluster0.2zl6a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-print(MONGO_DB_URL)
 
 import certifi
 ca=certifi.where()
