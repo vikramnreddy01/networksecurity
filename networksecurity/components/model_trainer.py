@@ -26,11 +26,13 @@ import dagshub
 
 
 # Initialize DagsHub tracking
+"""
 dagshub.init(
     repo_owner="vikramnreddy01",
     repo_name="networksecurity",
     mlflow=True
 )
+"""
 
 # Configure MLflow
 os.environ["MLFLOW_TRACKING_URI"] = r'https://dagshub.com/vikramnreddy01/networksecurity.mlflow'
