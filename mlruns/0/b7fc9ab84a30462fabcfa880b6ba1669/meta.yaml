@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/b7fc9ab84a30462fabcfa880b6ba1669/artifacts
+end_time: 1734184373998
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b7fc9ab84a30462fabcfa880b6ba1669
+run_name: overjoyed-kit-706
+run_uuid: b7fc9ab84a30462fabcfa880b6ba1669
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734184363924
+status: 4
+tags: []
+user_id: vikramnreddy01

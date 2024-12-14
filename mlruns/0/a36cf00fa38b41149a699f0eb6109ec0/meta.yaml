@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/a36cf00fa38b41149a699f0eb6109ec0/artifacts
+end_time: 1734185066646
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a36cf00fa38b41149a699f0eb6109ec0
+run_name: rogue-cod-37
+run_uuid: a36cf00fa38b41149a699f0eb6109ec0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734185060245
+status: 3
+tags: []
+user_id: vikramnreddy01

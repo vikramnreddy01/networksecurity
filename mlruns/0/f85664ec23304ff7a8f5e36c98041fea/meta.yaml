@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/f85664ec23304ff7a8f5e36c98041fea/artifacts
+end_time: 1734185071203
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f85664ec23304ff7a8f5e36c98041fea
+run_name: shivering-slug-926
+run_uuid: f85664ec23304ff7a8f5e36c98041fea
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734185066725
+status: 3
+tags: []
+user_id: vikramnreddy01
