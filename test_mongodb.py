@@ -1,15 +1,9 @@
+import os
+from dagshub import dagshub
 
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
-
-uri = "mongodb+srv://vikram:test@cluster0.2zl6a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-
-# Create a new client and connect to the server
-client = MongoClient(uri, server_api=ServerApi('1'))
-
-# Send a ping to confirm a successful connection
-try:
-    client.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
-except Exception as e:
-    print(e)
+# Use the token from the environment variable
+dagshub_token = os.getenv('DAGSHUB_TOKEN')
+if dagshub_token:
+    dagshub.login(token=dagshub_token)
+else:
+    print("DAGSHUB_TOKEN not found.")
